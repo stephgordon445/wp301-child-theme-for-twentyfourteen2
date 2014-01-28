@@ -17,7 +17,10 @@
 
 	<div class="entry-content">
 		<?php
-		echo get_post_meta( $post->ID, 'secondary-title', true );
+		echo get_post_meta
+		if ( is_page_template('tmp-testing.php') AND get_post_meta( $post->ID, 'secondary-title', true )) {
+    echo get_post_meta( $post->ID, 'secondary-title', true );
+};
 			the_content();
 			wp_link_pages( array(
 				'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'twentyfourteen' ) . '</span>',
